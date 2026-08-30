@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.10)
+project(GorillaTagInjector)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Create the injector executable
+add_executable(GorillaTagInjector Injector.cpp)
+
+# Link Windows libraries
+target_link_libraries(GorillaTagInjector
+    PRIVATE
+        kernel32
+        tlhelp32
+)
+
+# Platform-specific settings
+if(MSVC)
+    target_compile_options(GorillaTagInjector PRIVATE /W4)
+    set_target_properties(GorillaTagInjector PROPERTIES
+        VS_PLATFORM_TOOLSET "v142"
+    )
+endif()
+
+# Output directory
+set_target_properties(GorillaTagInjector PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)
