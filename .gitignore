@@ -1,0 +1,62 @@
+# Build directories
+build/
+Build/
+bin/
+Bin/
+lib/
+Lib/
+obj/
+Obj/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln.DotSettings
+
+# CMake
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+*.cmake
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Compiled binaries
+*.dll
+*.exe
+*.o
+*.a
+*.so
+*.dylib
+
+# Debug symbols
+*.pdb
+*.dSYM/
+
+# Macro files (user generated)
+macros/
+*.json
+
+# Dependencies
+jsoncpp/
+glm/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# OS specific
+Thumbs.db
+.DS_Store
+*.swp
